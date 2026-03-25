@@ -159,7 +159,9 @@ with st.sidebar:
         })
 
         try:
-            doc = DocxTemplate("plantillaPQR.docx")
+            base_dir = os.path.dirname(os.path.dirname(__file__)) 
+            template_path = os.path.join(base_dir, "templates", "plantillaPQR.docx")
+            doc = DocxTemplate(template_path)
             doc.render(st.session_state.doc_data)
 
             output = BytesIO()
