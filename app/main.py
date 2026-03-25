@@ -96,8 +96,7 @@ with col1:
             st.markdown(display_content)
 
     if prompt := st.chat_input(
-        "Ej: Dile a Patricia Rodríguez, Representante Legal de SV Comunicaciones, "
-        "que su solicitud de torres 700MHz fue trasladada al MinTIC según la ley 1437"
+        "Contextualiza al agente..."
     ):
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
